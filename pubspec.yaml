@@ -1,6 +1,7 @@
 name: cached_map
-description: Store, Retrieve or Delete map<String,dynamic> to your App's temporary directory.
-version: 2.0.2
+description: A Flutter plugin for Caching Json/Map<String,dynamic> to your App's temporary directory.
+
+version: 2.0.5
 homepage:
 environment:
   sdk: ">=2.12.0 <3.0.0"
