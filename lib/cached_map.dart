@@ -37,7 +37,7 @@ class Mapped {
     }
   }
   /// deletes the created file
-  static  Future<String> deleteFilev({required String cachedFileName}) async{
+  static  Future<String> deleteFileDirectly({required String cachedFileName}) async{
     File jsonFile;
     var tempDir = await getApplicationDocumentsDirectory();
     String _filePath = tempDir.path + '/$cachedFileName.json';

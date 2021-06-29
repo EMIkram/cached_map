@@ -2,11 +2,19 @@ import 'package:flutter_test/flutter_test.dart';
 
 import 'package:cached_map/cached_map.dart';
 
-void main() {
-  test('adds one to input values', () {
-    final calculator = Calculator();
-    expect(calculator.addOne(2), 3);
-    expect(calculator.addOne(-7), -6);
-    expect(calculator.addOne(0), 1);
-  });
+Future<void> main() async {
+
+
+await Mapped.saveFileDirectly(file:
+{
+  "user name":"user",
+  "email":"user@gmail.com"
+},
+    cachedFileName: "user");
+
+Map<String, dynamic>? user = await Mapped.loadFileDirectly(cachedFileName: "user");
+print(user);
+Mapped.deleteFileDirectly(cachedFileName: "user");
+
+
 }
